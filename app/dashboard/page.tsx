@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { AlertCircle, ArrowRight, Leaf, MapPin, Recycle, TrendingUp } from 'lucide-react';
+import { AlertCircle, ArrowRight, Leaf, MapPin, Recycle, TrendingUp, ShieldAlert } from 'lucide-react';
 
 export default function DashboardPage() {
   return (
@@ -16,19 +16,37 @@ export default function DashboardPage() {
       </header>
 
       {/* Quick Action / CTA */}
-      <div className="bg-gradient-to-br from-emerald-500 to-teal-600 rounded-3xl p-6 mb-8 text-white shadow-xl shadow-emerald-500/20 relative overflow-hidden">
-        <div className="relative z-10">
-          <h2 className="text-xl font-bold mb-2">Melihat tumpukan sampah?</h2>
-          <p className="text-emerald-50 mb-4 text-sm max-w-[80%]">Bantu jaga kebersihan kota dengan melaporkan sampah yang belum diangkut.</p>
-          <Link href="/dashboard/report" className="bg-white text-emerald-700 font-semibold px-5 py-2.5 rounded-full text-sm inline-flex items-center hover:bg-emerald-50 transition-colors">
-            Lapor Sekarang
-            <ArrowRight size={16} className="ml-2" />
-          </Link>
+      <div className="grid grid-cols-1 gap-4 mb-8">
+        {/* Lapor Sampah */}
+        <div className="bg-gradient-to-br from-emerald-500 to-teal-600 rounded-3xl p-6 text-white shadow-xl shadow-emerald-500/20 relative overflow-hidden">
+          <div className="relative z-10">
+            <h2 className="text-xl font-bold mb-2">Melihat tumpukan sampah?</h2>
+            <p className="text-emerald-50 mb-4 text-sm max-w-[80%]">Bantu jaga kebersihan kota dengan melaporkan sampah.</p>
+            <Link href="/dashboard/report" className="bg-white text-emerald-700 font-semibold px-5 py-2.5 rounded-full text-sm inline-flex items-center hover:bg-emerald-50 transition-colors">
+              Lapor Sekarang
+              <ArrowRight size={16} className="ml-2" />
+            </Link>
+          </div>
+          <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-white/10 rounded-full blur-2xl pointer-events-none" />
+          <div className="absolute top-4 right-4 opacity-20 pointer-events-none">
+            <Recycle size={60} />
+          </div>
         </div>
-        {/* Background decorations */}
-        <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-white/10 rounded-full blur-2xl pointer-events-none" />
-        <div className="absolute top-4 right-4 opacity-20 pointer-events-none">
-          <Recycle size={80} />
+
+        {/* SOS Kejahatan */}
+        <div className="bg-gradient-to-br from-rose-500 to-red-600 rounded-3xl p-6 text-white shadow-xl shadow-rose-500/20 relative overflow-hidden">
+          <div className="relative z-10">
+            <h2 className="text-xl font-bold mb-2">Dalam Bahaya?</h2>
+            <p className="text-rose-50 mb-4 text-sm max-w-[80%]">Tekan untuk membagikan lokasi langsung Anda ke aparat berwenang secara rahasia.</p>
+            <Link href="/dashboard/sos" className="bg-white text-rose-700 font-bold px-5 py-2.5 rounded-full text-sm inline-flex items-center hover:bg-rose-50 transition-colors shadow-lg shadow-white/20">
+              <ShieldAlert size={18} className="mr-2" />
+              Darurat SOS
+            </Link>
+          </div>
+          <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-black/10 rounded-full blur-2xl pointer-events-none" />
+          <div className="absolute top-4 right-4 opacity-20 pointer-events-none animate-pulse">
+            <ShieldAlert size={60} />
+          </div>
         </div>
       </div>
 
