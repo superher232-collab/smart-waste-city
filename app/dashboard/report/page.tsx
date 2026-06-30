@@ -52,6 +52,18 @@ export default function ReportPage() {
           </div>
         </div>
 
+        {/* Lapor Anonim */}
+        <div className="flex items-center justify-between p-4 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl mt-2">
+          <div>
+            <h3 className="text-sm font-bold text-zinc-900 dark:text-white">Lapor Anonim</h3>
+            <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Sembunyikan identitas saya pada laporan ini</p>
+          </div>
+          <label className="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" className="sr-only peer" />
+            <div className="w-11 h-6 bg-zinc-200 peer-focus:outline-none rounded-full peer dark:bg-zinc-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-zinc-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-zinc-600 peer-checked:bg-emerald-500"></div>
+          </label>
+        </div>
+
         <Link href="/dashboard" className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-4 rounded-2xl font-bold shadow-lg shadow-emerald-500/30 transition-all flex items-center justify-center mt-8">
           <UploadCloud size={20} className="mr-2" />
           Kirim Laporan

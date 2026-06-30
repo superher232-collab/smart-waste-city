@@ -2,10 +2,11 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, Camera, Map, User } from 'lucide-react';
+import { Home, Camera, Map, User, Calendar } from 'lucide-react';
 
 const navItems = [
   { name: 'Beranda', href: '/dashboard', icon: Home },
+  { name: 'Jadwal', href: '/dashboard/schedule', icon: Calendar },
   { name: 'Lapor', href: '/dashboard/report', icon: Camera },
   { name: 'Peta', href: '/dashboard/map', icon: Map },
   { name: 'Profil', href: '/dashboard/profile', icon: User },
