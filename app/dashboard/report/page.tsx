@@ -73,7 +73,7 @@ export default function ReportPage() {
       {/* Report Tracking Section */}
       <div className="mt-12">
         <h3 className="text-lg font-bold text-zinc-900 dark:text-white mb-4">Tracking Laporan Anda</h3>
-        
+
         <div className="bg-white dark:bg-zinc-900 p-5 rounded-3xl shadow-sm border border-zinc-100 dark:border-zinc-800">
           <div className="flex justify-between items-start mb-6">
             <div>
@@ -85,7 +85,7 @@ export default function ReportPage() {
 
           {/* Tracking Steps */}
           <div className="relative pl-1.5 space-y-5 before:absolute before:inset-y-2 before:left-5 before:w-0.5 before:bg-zinc-100 dark:before:bg-zinc-800">
-            
+
             <div className="relative z-10 flex items-start">
               <div className="w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-500/20 text-emerald-500 flex items-center justify-center shrink-0 border-4 border-white dark:border-zinc-900 shadow-sm">
                 <CheckCircle2 size={16} />

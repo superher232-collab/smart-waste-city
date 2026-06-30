@@ -71,7 +71,7 @@ export default function DashboardPage() {
               <AlertCircle size={20} className="text-zinc-500 dark:text-zinc-400" />
             </div>
             <div className="flex-1">
-              <h4 className="text-sm font-bold text-zinc-900 dark:text-white">Sampah dilaporkan di Jl. Sudirman</h4>
+              <h4 className="text-sm font-bold text-zinc-900 dark:text-white">Sampah dilaporkan di Jl. Kaliurang</h4>
               <p className="text-xs text-zinc-500 dark:text-zinc-400">2 jam yang lalu</p>
             </div>
             <div className="w-2 h-2 rounded-full bg-orange-400" />
