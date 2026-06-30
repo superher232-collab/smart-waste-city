@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Camera, MapPin, UploadCloud } from 'lucide-react';
+import { Camera, MapPin, UploadCloud, CheckCircle2, Truck } from 'lucide-react';
 
 export default function ReportPage() {
   return (
@@ -69,6 +69,56 @@ export default function ReportPage() {
           Kirim Laporan
         </Link>
       </form>
+
+      {/* Report Tracking Section */}
+      <div className="mt-12">
+        <h3 className="text-lg font-bold text-zinc-900 dark:text-white mb-4">Tracking Laporan Anda</h3>
+        
+        <div className="bg-white dark:bg-zinc-900 p-5 rounded-3xl shadow-sm border border-zinc-100 dark:border-zinc-800">
+          <div className="flex justify-between items-start mb-6">
+            <div>
+              <p className="text-sm font-bold text-zinc-900 dark:text-white">Sampah Organik Menumpuk</p>
+              <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Depo Seturan (Dilaporkan 2 jam lalu)</p>
+            </div>
+            <span className="px-2.5 py-1 bg-amber-100 text-amber-700 dark:bg-amber-500/20 dark:text-amber-400 text-[10px] font-bold rounded-full">Diproses</span>
+          </div>
+
+          {/* Tracking Steps */}
+          <div className="relative pl-1.5 space-y-5 before:absolute before:inset-y-2 before:left-5 before:w-0.5 before:bg-zinc-100 dark:before:bg-zinc-800">
+            
+            <div className="relative z-10 flex items-start">
+              <div className="w-8 h-8 rounded-full bg-emerald-100 dark:bg-emerald-500/20 text-emerald-500 flex items-center justify-center shrink-0 border-4 border-white dark:border-zinc-900 shadow-sm">
+                <CheckCircle2 size={16} />
+              </div>
+              <div className="ml-4 mt-1">
+                <p className="text-sm font-bold text-zinc-900 dark:text-white">Laporan Diterima</p>
+                <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">10:30 WIB - Sistem telah mencatat laporan Anda.</p>
+              </div>
+            </div>
+
+            <div className="relative z-10 flex items-start">
+              <div className="w-8 h-8 rounded-full bg-amber-100 dark:bg-amber-500/20 text-amber-500 flex items-center justify-center shrink-0 border-4 border-white dark:border-zinc-900 shadow-sm">
+                <Truck size={16} />
+              </div>
+              <div className="ml-4 mt-1">
+                <p className="text-sm font-bold text-zinc-900 dark:text-white">Armada Menuju Lokasi</p>
+                <p className="text-xs text-amber-600 dark:text-amber-500 font-medium mt-0.5">Sedang dalam perjalanan (Est. 15 menit)</p>
+              </div>
+            </div>
+
+            <div className="relative z-10 flex items-start opacity-40">
+              <div className="w-8 h-8 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-400 flex items-center justify-center shrink-0 border-4 border-white dark:border-zinc-900 shadow-sm">
+                <CheckCircle2 size={16} />
+              </div>
+              <div className="ml-4 mt-1">
+                <p className="text-sm font-bold text-zinc-900 dark:text-white">Selesai Diangkut</p>
+                <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">Menunggu konfirmasi petugas</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

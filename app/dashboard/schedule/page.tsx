@@ -4,24 +4,24 @@ export default function SchedulePage() {
   const schedules = [
     {
       id: 1,
-      area: 'Kecamatan Tengah (Alun-alun & Sekitarnya)',
+      area: 'Kapanewon Depok (Seturan & Babarsari)',
       days: 'Senin, Rabu, Jumat',
       time: '06:00 - 09:00 WIB',
-      truckId: 'TRK-01 (B 1234 CD)'
+      truckId: 'TRK-01 (AB 1234 CD)'
     },
     {
       id: 2,
-      area: 'Kecamatan Utara (Perumahan Indah)',
+      area: 'Kapanewon Kasihan (Ringroad Selatan)',
       days: 'Selasa, Kamis, Sabtu',
       time: '07:00 - 10:00 WIB',
-      truckId: 'TRK-02 (B 5678 EF)'
+      truckId: 'TRK-02 (AB 5678 EF)'
     },
     {
       id: 3,
-      area: 'Kecamatan Selatan (Kawasan Industri)',
+      area: 'Kapanewon Sewon (Kawasan Industri & Kampus)',
       days: 'Setiap Hari',
       time: '16:00 - 19:00 WIB',
-      truckId: 'TRK-03 (B 9012 GH)'
+      truckId: 'TRK-03 (AB 9012 GH)'
     }
   ];
 
